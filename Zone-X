@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZONE X</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080b12;color:white;font-family:Arial,sans-serif}
+header{padding:20px;border-bottom:1px solid #222;display:flex;justify-content:space-between}
+.logo{font-size:26px;font-weight:bold}
+.logo span{color:#168cff}
+nav{display:flex;justify-content:space-around;padding:15px;background:#101521;position:sticky;top:0}
+button{background:#168cff;color:white;border:0;padding:12px 18px;border-radius:9px;font-weight:bold}
+main{max-width:600px;margin:auto;padding:15px}
+.card{background:#111722;border:1px solid #252d3b;border-radius:14px;padding:16px;margin:15px 0}
+input{width:100%;padding:14px;margin:8px 0;background:#080b12;color:white;border:1px solid #333;border-radius:9px}
+.story{display:inline-block;background:#18263c;padding:15px;border-radius:50%;margin:5px}
+.small{color:#aab3c4}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">ZONE <span>X</span></div>
+<div>🔔　✉️</div>
+</header>
+<nav>
+<span>For You</span>
+<span>Following</span>
+</nav>
+<main>
+<div class="card">
+<strong>Stories</strong>
+<div>
+<span class="story">＋</span>
+<span class="story">👤</span>
+<span class="story">👤</span>
+<span class="story">👤</span>
+</div>
+</div>
+<div class="card">
+<h2>Welcome to ZONE X</h2>
+<p class="small">Your world. Your people. Your zone.</p>
+<button onclick="showLogin()">Log In</button>
+<button onclick="showSignup()">Sign Up</button>
+</div>
+<div id="account"></div>
+<div class="card">
+<h3>Discover your zone</h3>
+<p class="small">Your community starts here.</p>
+</div>
+</main>
+<script>
+function showLogin(){
+document.getElementById('account').innerHTML=
+'<div class="card"><h2>Log In</h2><input placeholder="Email or phone"><input type="password" placeholder="Password"><button>Log In</button></div>';
+}
+function showSignup(){
+document.getElementById('account').innerHTML=
+'<div class="card"><h2>Create Account</h2><input placeholder="Full name"><input placeholder="Username"><input placeholder="Nickname"><input type="date"><input placeholder="Email or phone"><input type="password" placeholder="Create password"><input type="password" placeholder="Confirm password"><button>Create Account</button></div>';
+}
+</script>
+</body>
+</html>
